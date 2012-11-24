@@ -1,0 +1,16 @@
+        <div class="sidebar-nav span3 pull-left">
+            <ul class="nav nav-list">
+                <li class="navbar-search"><input type="text" class="search-query" placeholder="Search"></li>
+                <li class="divider"></li>
+                <li class="nav-header">平台说明</li>
+                <li{if $category == 'index'} class="active"{/if}><a href="/wiki">平台介绍</a></li>
+                <li class="nav-header">授权API</li>
+                <li{if $category == 'auth/sso'} class="active"{/if}><a href="#">单点登录授权</a></li>
+                <li{if $category == 'auth/oauth'} class="active"{/if}><a href="#">oauth2.0</a></li>
+                <li class="nav-header">资源API</li>
+                <li{if $category == 'api/lbs'} class="active"{/if}><a href="#">粗定位接口</a></li>
+                <li{if $category == 'api/exception'} class="active"{/if}><a href="#">异常代码接口</a></li>
+                <li class="nav-header">API工具</li>
+                <li{if $category == 'tools/exception'} class="active"{/if}><a href="/wiki/tools/exception">平台异常代码</a></li>
+            </ul>
+        </div>

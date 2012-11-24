@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>错误代码 &middot 文档 &middot 开放平台</title>
+<link rel="stylesheet" href="http://static.wo-api.com/bootstrap/css?2.1.0" />
+<link rel="stylesheet" href="/themes/bootstrap2/css/bootstrap.css" />
+<link rel="stylesheet" href="/themes/bootstrap2/css/docs.css" />
+</head>
+
+<body>
+<div class="container">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+    	<div class="navbar-inner">
+        	<div class="container">
+            	<a class="brand" href="#">开放平台</a>
+                <ul class="nav pull-right">
+                	<li><a href="#">首页</a></li>
+                    <li><a href="#">产品</a></li>
+                    <li><a href="#">应用开发</a></li>
+                    <li class="active"><a href="#">文档</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+	<div class="container-content span12 well">
+    	<div class="row-fluid">
+{include file="wiki/wiki-sidebar.tmpl.html" category=$_RESULT.category}
+        <div id="doc-content" class="span9">
+{if $_RESULT.route == 'exception'}
+            <div class="page-header"><h3>平台接口请求异常代码</h3><p>异常代码查询提供平台异常代码明细查询,方便应用开发与维护.</p></div>
+            <section>
+				<table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>状态编码</th>
+                            <th>状态信息</th>
+                            <th>状态描述</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    {foreach $_RESULT.code_list as $code_item}
+                        <tr>
+                            <td>{$code_item.status_code}</td>
+                            <td>{$code_item.message}</td>
+                            <td>{$code_item.description}</td>
+                        </tr>
+{/foreach}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">更新时间 2012-10-25</td>
+                        </tr>
+                    </tfoot>
+				</table>
+            </section>
+{else}
+
+{/if}
+        </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="http://static.wo-api.com/jquery?1.8.0"></script>
+</html>

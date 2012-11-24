@@ -1,0 +1,79 @@
+.dispatch legend {
+	margin-bottom:0;
+}
+
+.dispatch section h3, .dispatch h3.form-actions, .dispatch-preview section h3 {
+	padding:0 18px;
+	margin-top:0;
+	font-size:13px;
+	font-weight:bold;
+	border-bottom:1px solid #dedede;
+}
+
+.dispatch-preview {
+	border:1px solid #08c;
+	
+}
+.dispatch-preview section h3 {
+	background:#08c;
+	color:#fff;
+	
+	margin:0;
+}
+
+.dispatch-preview {
+	box-shadow: 0 10px 35px rgba(0,0,0,.6);
+}
+
+.dispatch-preview.form-horizontal .control-group {
+	margin:0;
+	border-bottom:1px dashed #08c;
+	background:#B2DBF1;
+}
+
+.dispatch-preview.form-horizontal .control-group:last-child {
+	border-bottom:0 none;
+}
+
+.dispatch-preview.form-horizontal .control-label {
+	background:#B2DBF1;
+	line-height:40px;
+	min-height:40px;
+	margin:0;
+	padding-top:0;
+}
+
+.dispatch-preview.form-horizontal .controls {
+	overflow:hidden;
+}
+.dispatch-preview.form-horizontal .controls label {
+	word-break:break-all;
+	margin-bottom:0;
+	min-height:40px;
+	line-height:40px;
+	background:#fafafa;
+	width:95%;
+	padding:0 3%;
+	margin:0;
+}
+
+.modal-body {
+	
+	max-height:300px;
+}
+
+.modal-body.dispatch-receipt {
+	padding:0;
+}
+
+#process-dispatch-modal {
+	margin-top:-300px;
+}
+
+
+#add-dispatch-modal {
+	margin-top:-350px;
+}
+#add-dispatch-modal .modal-body {
+	max-height:600px;
+}

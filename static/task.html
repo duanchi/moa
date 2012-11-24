@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task</title>
+<link href="http://static.wo-api.com/bootstrap/css/?2.1.0" rel="stylesheet" />
+<link href="/themes/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="/themes/bootstrap/css/task.css" rel="stylesheet" />
+</head>
+
+<body>
+<header>hello world!</header>
+    <div id="wrapper-container" class="span10 rows">
+        <div class="well well-large">
+        	
+        	<div id="task" class="tabbable tabs-left auto-height-container">
+                <div class="tab-content">
+                    <div class="tab-pane active task" id="task-important">
+                        <h6>已完成&nbsp;<span class="badge">收起</span></h6>
+                        <div class="timeline"><span class="badge"><i class="icon-time icon-white"></i>&nbsp;今日完成</span></div>
+                        <table class="table table-bordered">
+                            <tr>
+                            	<td width="18px"><i class="selected"></i></td>
+                                <td width="18px"><i class="icon-bookmark"></i></td>
+                                <td><a rel="modal-task" data-toggle="modal" data-target="#task-detail-modal" href="task-detail.html" onclick="return false;">这是一个新任务</a></td>
+                            </tr>
+                            <tr>
+                            	<td width="18px"><i class="icon-ok"></i></td>
+                                <td width="18px"><i class="icon-bookmark"></i></td>
+                                <td><a href="task-detail.html">这是一个j即将完成的任务</a></td>
+                            </tr>
+                            <tr>
+                            	<td width="18px"><i class="selected"></i></td>
+                                <td width="18px"></td>
+                                <td>This is a IMPORTANT mission!</td>
+                            </tr>
+                        </table>
+                        <div class="timeline"><span class="badge"><i class="icon-time icon-white"></i>&nbsp;上周完成</span></div>
+                        <table class="table table-bordered">
+                            <tr>
+                            	<td width="18px"><i class="selected"></i></td>
+                                <td width="18px"><i class="icon-bookmark"></i></td>
+                                <td>这是一个新任务</td>
+                            </tr>
+                            <tr>
+                            	<td width="18px"><i class="icon-ok"></i></td>
+                                <td width="18px"><i class="icon-bookmark"></i></td>
+                                <td>这是一个j即将完成的任务</td>
+                            </tr>
+                            <tr>
+                            	<td width="18px"><i class="selected"></i></td>
+                                <td width="18px"></td>
+                                <td>This is a IMPORTANT mission!</td>
+                            </tr>
+                        </table>
+                        <div class="timeline"><span class="badge"><i class="icon-time icon-white"></i>&nbsp;更早些时候</span></div>
+                        <table class="table table-bordered">
+                            <tr>
+                            	<td width="18px"></td>
+                                <td width="18px"><i class="icon-inbox"></i></td>
+                                <td><a href="">查看所有已完成的任务</a></td>
+                            </tr>
+                        </table>
+                        <h6>未完成</h6>
+                        <table class="table table-bordered">
+                            <tr>
+                            	<td width="18px"><i class="selected"></i></td>
+                                <td width="18px"><i class="icon-bookmark translucent"></i></td>
+                                <td>这是一个新任务</td>
+                                <td class="progress-td warning"><div class="progress-warn pull-left">逾期3天</div><div class="progress-count pull-right">80%</div><div class="progress progress-danger pull-right"><div class="bar" style="width:80%"></div></div></td>
+                            </tr>
+                            <tr>
+                            	<td width="18px"><i class="selected"></i></td>
+                                <td width="18px"><i class="icon-bookmark translucent"></i></td>
+                                <td>这是一个新任务</td>
+                                <td><div class="progress-count pull-right">80%</div><div class="progress progress-info pull-right"><div class="bar" style="width:20%"></div></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane task" id="task-normal">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>ccc</th>
+                            </tr>
+                            <tr>
+                                <td>bbb</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane task" id="task-last">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>aaddda</th>
+                            </tr>
+                            <tr>
+                                <td>bbb</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs">
+                	<li class="active"><a href="#task-important" data-toggle="tab">重要任务&nbsp;<span class="badge badge-important">4</span></a></li>
+                    <li><a href="#task-normal" data-toggle="tab">一般任务<span class="badge">4</span></a></li>
+                    <li><a href="#task-last" data-toggle="tab">其他任务<span class="badge">4</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="right-container" class="span2 pull-right">
+    </div>
+    <div id="task-detail-modal" class="modal hide fade">
+    	<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5>任务详情:这是一个新任务</h5>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+        	<div class="btn-toolbar pull-left">
+                <div class="task-detail-section-controller btn-group">
+                    <button href="#task-detail-list" class="btn active"><i class="icon-list"></i></button>
+                    <button href="#task-information" class="btn"><i class="icon-edit"></i></button>
+                    <button href="#task-calendar" class="btn"><i class="icon-calendar"></i></button>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary">保存任务</a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="http://static.wo-api.com/jquery/?1.8.0"></script>
+<script type="text/javascript" src="http://static.wo-api.com/bootstrap/js/?2.1.0"></script>
+<script type="text/javascript" src="/themes/bootstrap/js/controller/task.controller.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/js/lib/task.lib.js"></script>
+</html>

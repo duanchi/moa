@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link href="http://static.wo-api.com/bootstrap/css/?2.1.0" rel="stylesheet" />
+<link href="/themes/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="/themes/bootstrap/css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+<aside class="sidebar sidebar-fixed-left span2">
+    <ul class="side auto-height-container">
+        <li><a id="user-options" href="#user-options"><i class="icon-chevron-up"></i>&nbsp;断翅<span class="notification pull-right"><i class="icon-user icon-white"></i>&nbsp;注销</span></a></li>
+        <li class="active"><a href="task.html" target="target-frame"><i class="icon-tasks"></i>&nbsp;任务列表<span class="notification notification-info pull-right">123</span></a></li>
+        <li><a href=""><i class="icon-time"></i>&nbsp;提醒列表<span class="notification pull-right">3</span></a></li>
+        <li><a href="map.html" target="target-frame"><i class="icon-map-marker"></i>&nbsp;位置分布</a></li>
+        <li><a href="im.html" target="target-frame"><i class="icon-comment"></i>&nbsp;即时通信</a></li>
+        <li id="settings" class="pull-buttom"><a href="#settings"><i class="icon-wrench"></i></a></li>
+    </ul>
+</aside>
+<div id="main-container" class="row-fluid auto-height-container">
+	<iframe name="target-frame" id="target-frame" src="task.html" frameborder="0"></iframe>
+</div>
+<div class="alert alert-success alert-notification">您有一个新提醒<a class="close" data-dismiss="alert" href="#">&times;</a></div>
+</body>
+<script type="text/javascript" src="http://static.wo-api.com/jquery/?1.8.0"></script>
+<script type="text/javascript" src="http://static.wo-api.com/bootstrap/js/?2.1.0"></script>
+<script type="text/javascript" src="/themes/bootstrap/js/controller/root.controller.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/js/lib/root.lib.js"></script>
+</html>

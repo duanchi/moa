@@ -1,0 +1,11 @@
+        	<div class="box-sidebar well sidebar-nav span3">
+            	<ul class="nav nav-list">
+                	<li class="nav-header">新派单</li>
+                    <li{if $_REQUEST.controller == 'Dispatch' and $_REQUEST.action == 'support'} class="active"{/if}><a href="/support/dispatch/support">新增售后派单</a></li>
+                    <li{if $_REQUEST.controller == 'Dispatch' and $_REQUEST.action == 'consult'} class="active"{/if}><a href="/support/dispatch/consult">新增咨询派单</a></li>
+                    <li class="nav-header">派单管理</li>
+                    <li{if $_REQUEST.controller == 'Dispatch' and $_REQUEST.action == 'pending'} class="active"{/if}><a href="/support/dispatch/pending">待处理派单</a></li>
+                    <li{if $_REQUEST.controller == 'Dispatch' and $_REQUEST.action == 'processing'} class="active"{/if}><a href="/support/dispatch/processing">处理中派单</a></li>
+                    <li{if $_REQUEST.controller == 'Dispatch' and $_REQUEST.action == 'finished'} class="active"{/if}><a href="/support/dispatch/finished">已完成派单</a></li>
+                </ul>
+            </div>

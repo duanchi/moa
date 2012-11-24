@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task</title>
+<link href="http://static.wo-api.com/bootstrap/css/?2.1.0" rel="stylesheet" />
+<link href="/themes/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="/themes/bootstrap/css/im.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="wrapper-container" class="span10 rows auto-height-container">
+            <div id="im-interface-modal" class="modal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5>websocket即时通信(当前用户:<span id="current-user"></span>)&nbsp;<span id="status" class="label label-info">正在连接...</span></h5>
+                </div>
+                <div class="modal-body auto-height-container">
+                	<div class="conversation-list pull-left">
+                    	<div class="search-and-conversation">
+                        	<div id="search" class="input-prepend pull-left"><input type="text" class="input-medium search-query" /><span class="add-on"><i class="icon-search"></i></span></div>
+                            <button href="#conversation-online-list" id="new-conversation" rel="popover" class="btn" title="在线用户"><i class="icon-edit"></i></button>
+                        </div>
+                        <ul id="conversation-user-list">
+                        </ul>
+                    </div>
+                    <div class="conversation-content pull-right">
+                    </div>
+                    <div class="conversation-box">
+                        <div id="add-conversation" class="input-prepend pull-left"><input type="text" class="input-large search-query" /></div>
+                        <button id="add-conversation-btn" data-name="lovemybud" data-id="111" class="btn btn-primary">发送</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <ul id="current-online-list" class="hide"></ul>
+</body>
+<script type="text/javascript" src="http://static.wo-api.com/jquery/?1.8.0"></script>
+<script type="text/javascript" src="http://static.wo-api.com/bootstrap/js/?2.1.0"></script>
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/js/controller/im.controller.js"></script>
+<script type="text/javascript" src="/themes/bootstrap/js/lib/im.lib.js"></script>
+</html>

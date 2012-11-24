@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="client.css">
+    <script src="http://static.wo-api.com/jquery/?1.8.0"></script>
+	<script src="json2.js"></script>
+	<script>
+		$(function() {
+			var log, serverUrl, socket,$client,$user = '';
+			if ($user = prompt('请输入昵称')) {
+			
+			log = function(msg) {
+				return $('#log').append("" + msg + "<br />");
+			};
+			serverUrl = 'ws://172.16.0.211:8000/im';
+			if (window.MozWebSocket) {
+				socket = new MozWebSocket(serverUrl);
+			} else if (window.WebSocket) {
+				socket = new WebSocket(serverUrl);
+			}
+			socket.binaryType = 'blob';
+			
+			if ($user != '') socket.onopen = function(msg) {
+				var payload = new Object();
+				payload.action = 'auth';
+				payload.user = $user;
+				socket.send(JSON.stringify(payload));
+				return $('#status').removeClass().addClass('online').html('connected');
+			};
+			socket.onmessage = function(msg) {
+				var response;
+				response = JSON.parse(msg.data);
+				date = new Date();
+				switch(response.action) {
+					case 'message' :
+						log("Received from " + response.from.user + " @ " + date.getHours() + "点" + date.getMinutes() + "分: <br />" + response.data + "<br />");
+						break;
+					
+					case 'sync' :
+					default :
+						var content = '';
+						for (var v = 0; v < response.data.length ; v++) {
+							content += '<li><a href="#" onclick="select_client(\'' + response.data[v].user + '\',\'' + response.data[v].id + '\');return false;">' + response.data[v].user + '</a></li>';
+						}
+						$('#client-list').empty();
+						$('#client-list').append(content);
+						break;
+				}
+			};
+			socket.onclose = function(msg) {
+				return $('#status').removeClass().addClass('offline').html('disconnected');
+			};
+			$('#status').click(function() {
+				return socket.close();
+			});
+			$('#send').click(function() {
+				date = new Date();
+				var payload;
+				payload = new Object();
+				payload.action = 'message';
+				payload.user = $user;
+				payload.direct_id = client;
+				payload.data = $('#data').val();
+				log("Sent @ " + date.getHours() + "点" + date.getMinutes() + "分: <br />" + payload.data + "<br />");
+				return socket.send(JSON.stringify(payload));
+			});
+			}
+		});
+		function select_client(user, id) {
+			client = id
+			$('#client-id').text(user);
+		}
+    </script>
+    
+	<meta charset=utf-8 />
+
+	<title>IM Application</title>
+</head>
+<body>
+    <div id="container">
+        <h1>IM Application</h1>
+		<span id="status" class="offline">offline</span>
+		
+		<h2>Send Text Frame</h2>
+		<ul id="client-list"></ul>
+        <input id="data" placeholder="data" type="text" />
+        <button id="send">Send Text</button>
+		
+		<h2>Send Binary Frame</h2>
+		<form name="binaryFrame" action="#">
+			<input type="file" name="file" id="file">
+			<button id="sendfile">Send Binary</button>
+		</form>
+		
+		<h2>Response (<span id="client-id"></span>)</h2>
+        <div id="log"></div>
+    </div>
+</body>
+</html>​

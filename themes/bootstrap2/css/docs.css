@@ -1,0 +1,38 @@
+.container-content {
+	margin:120px auto 50px;
+}
+
+.container-content.well {
+	padding:0;
+	
+}
+
+.row-fluid, .container-content, .sidebar-nav {
+	height:auto !important; 
+    height:240px; 
+    min-height:240px;
+	overflow:hidden;
+}
+.sidebar-nav {
+	background:#eee;
+	padding:16px 0;
+	margin:0;
+	border-right:1px solid #999;
+	padding-bottom:100000px;
+	margin-bottom:-100000px;
+}
+
+#doc-content>.page-header {
+	padding:0 10px;
+	border-bottom:1px solid #ccc;
+}
+
+.nav-list .navbar-search {
+	float:none;
+}
+
+#doc-content.span9 { width:77%!important; margin-left:0!important;}
+
+#doc-content section { padding:10px;}
+
+.nav-list li { line-height:24px;!important}

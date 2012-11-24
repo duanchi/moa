@@ -1,0 +1,20 @@
+#map { width:100%; height:100%;}
+#panZoom { display:none; visibility:hidden;}
+#option { position:fixed; width:100%; height:168px; z-index:10001; top:-140px; padding-bottom:18px;
+  /*background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;*/
+}
+/*#option .option_inner { width:100%; height:150px; position:relative; -webkit-box-shadow:rgba(0, 0, 0, 0.599219) 0px -2px 12px 2px inset;}
+#option .option_inner, #option .handler { background:url(images/background-gray-spined.png) top center;}
+#option .handler { position:absolute; bottom:-18px; left:50%; display:block; width:72px; height:18px; -webkit-border-bottom-left-radius:4px; -webkit-border-bottom-right-radius:4px; z-index:10002; -webkit-box-shadow:rgba(0, 0, 0, 0.599219) 0px 2px 6px -2px; display:none;}
+#option .option_inner:hover .handler { display:block;}*/
+#option { position:fixed; z-index:10001; top:45px; left:80px;}
+#option .popover { z-index:10010;}
+#popover-menu { top:-22px; left:110px;}
+#popover-menu .arrow { top:36px;}
+#map .gmnoprint { display:none;}
