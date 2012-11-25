@@ -2,11 +2,11 @@
 
 namespace privateClass\Auth;
 
-class Accounter {
+class Auther {
 	static private $__instance = null;
 	
 	static public function init() {
-		self::$__instance = new Account();
+		self::$__instance = new Auth();
 	}
 	
 	static public function getInstance() {
